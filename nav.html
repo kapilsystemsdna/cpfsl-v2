@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="box-content d-flex align-items-center justify-content-between">
+        <div class="logo">
+            <a href="index.html" class="logo-nav">
+                <img class="img-fluid" src="assets/images/logo/cpfsl_logo_dark.jpg" alt="01 Logo">
+            </a>
+            <a href="#open-nav-bar-menu" class="open-nav-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="nav-bar-link" id="open-nav-bar-menu">
+            <ul class="level-1">
+                <li>
+                    <a href="index.html" class="color-active nav-link">Home</a>
+                </li>
+                <li class="has-menu">                    
+                    <a href="about-us.html" class="nav-link">About us</a>
+                    <div class="toggle-btn"></div>
+                    <ul class="level-2">
+                        <li><a href="history.html">History</a></li>
+                        <!-- <li><a href="partners.html">Partners</a></li> -->
+                        <li><a href="team.html">The Team</a></li>
+                        <!-- <li><a href="policy.html">Privacy Policy</a></li> -->
+                        <li><a href="https://business.yell.com/websites-privacy-cookie-policy/" target="_blank">Privacy Policy</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="engagement-model.html">Engagement Model</a>
+                </li>
+                <li class="has-menu">
+                    <a href="services.html">Products and Services</a>
+                    <div class="toggle-btn"></div>
+                    <ul class="level-2">
+                        <li><a href="sales.html">Company Sales</a></li>
+                        <li><a href="finance.html">Corporate Finance</a></li>
+                        <li><a href="mergers.html">Mergers</a></li>
+                        <li><a href="acquisitions.html">Acquisitions</a></li>
+                        <li><a href="mentoring.html">Business Mentoring</a></li>
+                        <li><a href="plans.html">Business Plans</a></li>
+                        <li><a href="valuation.html">Company Valuation</a></li>
+                        <li><a href="turnaround.html">Turnaround</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html">Contact us</a>
+                    <!-- <ul class="level-2">
+                        <li><a href="#">Contact form</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+        </div>
+        <!-- <ul class="nav-bar-btn-1 d-none d-lg-block">                        
+            <li><a href="contact.html" class="btn-1 d-flex justify-content-center">Contact us</a></li>
+        </ul> -->
+        <!-- <ul class="icon">                        
+            <li><a href="#" class="icon-item open-search-box"><i class="fas fa-search"></i></a></li>
+        </ul> -->
+    </div>
+</div>
+<script>
+    // :: Varables Navbar
+    /*var headerBar = $('.nav-bar'),
+        $navbarMenu = $('#open-nav-bar-menu'),
+        $menuLink = $('.open-nav-bar'),
+        $menuTriggerLink = $('.has-menu > a');*/
+
+    // :: Add Class Active For $menuLink And $navbarMenu
+    /*$menuLink.on('click', function (e) {
+        e.preventDefault();
+        $menuLink.toggleClass('active');
+        $navbarMenu.toggleClass('active');
+    });*/
+    // :: Add Class Active For $menuTriggerLink
+    /*$menuTriggerLink.on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.toggleClass('active').next('ul').toggleClass('active');
+    });*/
+    // $(function() {
+    //     debugger
+    //     $('nav li a[href^="' + location.pathname.split("/")[3] + '"]').addClass('color-active').parent('li').siblings().children().removeClass('color-active');
+    //     $('nav li li a[href^="' + location.pathname.split("/")[3] + '"]').closest('.has-menu').children('a').addClass('color-active').parent('li').siblings().children().removeClass('color-active');
+    // });
+    $(function() {
+        debugger
+        $('nav li a[href^="' + location.href.split("/").pop() + '"]').addClass('color-active').parent('li').siblings().children().removeClass('color-active');
+        $('nav li li a[href^="' + location.href.split("/").pop() + '"]').closest('.has-menu').children('a').addClass('color-active').parent('li').siblings().children().removeClass('color-active');
+    });
+    // var selector = 'nav li';
+    // var url = window.location.href;
+    // var target = url.split('/');
+    //  $(selector).each(function(){
+    //      debugger
+    //     if($(this).find('a').attr('href')===('/'+target[target.length-1])){
+    //       $(selector).removeClass('active');
+    //       $(this).removeClass('active').addClass('active');
+    //     }
+    //  });
+</script>
